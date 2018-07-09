@@ -189,6 +189,11 @@ self.addEventListener('fetch', function(event) {
 // Runtime cache configuration, using the sw-toolbox library.
 <%= runtimeCaching %>
 <% } %>
+
+<% if (preCacheToolbox) { %>
+// preCacheToolbox cache configuration, using the sw-toolbox library.
+<%= preCacheToolbox %>
+<% } %>
 <% } %>
 
 <% if (importScripts) { %>
